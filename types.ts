@@ -8,11 +8,13 @@ interface CosmicObject {
   type: string;
   created_at: string;
   modified_at: string;
+  thumbnail?: string;
 }
 
 // Restaurant interface
 export interface Restaurant extends CosmicObject {
   type: 'restaurants';
+  thumbnail?: string;
   metadata: {
     name: string;
     description?: string;
