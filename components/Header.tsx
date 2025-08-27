@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { useCart } from '@/hooks/useCart'
+import { ShoppingCart } from 'lucide-react'
 import CartSidebar from './CartSidebar'
 
 export default function Header() {
@@ -37,9 +38,7 @@ export default function Header() {
                 onClick={() => setIsCartOpen(true)}
                 className="relative p-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l1.5 6m0 0h9" />
-                </svg>
+                <ShoppingCart className="w-6 h-6" />
                 {cartItemCount > 0 && (
                   <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                     {cartItemCount}
